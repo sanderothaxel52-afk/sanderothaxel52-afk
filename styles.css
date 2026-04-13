@@ -1,0 +1,14 @@
+body { font-family: Arial, sans-serif; background:#0b0f14; color:#e6edf3; margin:0; }
+.app { padding:20px; max-width:1200px; margin:auto; }
+.topbar { display:flex; justify-content:space-between; align-items:center; }
+.subtitle { color:#8b949e; }
+.card { background:#161b22; padding:12px; border-radius:10px; margin-bottom:10px; }
+.stats-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:10px; }
+.layout { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:10px; }
+button { padding:8px 10px; border:none; border-radius:6px; cursor:pointer; background:#238636; color:white; }
+button.secondary { background:#30363d; }
+button.danger { background:#da3633; }
+.list { display:flex; flex-direction:column; gap:6px; }
+.item { padding:8px; background:#21262d; border-radius:6px; }
+.event-log { max-height:200px; overflow:auto; font-size:12px; }
+.compact .item { font-size:12px; }

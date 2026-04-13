@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steal the AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>Steal the AI</h1>
+        <p class="subtitle">Build a lab. Buy AIs. Raid rivals. Survive the chaos.</p>
+      </div>
+      <button id="helpBtn" class="secondary">How to Play</button>
+    </header>
+
+    <section class="stats-grid">
+      <div class="card stat"><span>Cash</span><strong id="cashDisplay">$0</strong></div>
+      <div class="card stat"><span>Heat</span><strong id="heatDisplay">0</strong></div>
+      <div class="card stat"><span>Owned AIs</span><strong id="ownedDisplay">0</strong></div>
+      <div class="card stat"><span>Power</span><strong id="powerDisplay">0 / 0</strong></div>
+      <div class="card stat"><span>Base Level</span><strong id="baseLevelDisplay">1</strong></div>
+      <div class="card stat"><span>Threat</span><strong id="threatDisplay">Low</strong></div>
+    </section>
+
+    <main class="layout">
+      <section class="panel card">
+        <div class="panel-header">
+          <h2>Market</h2>
+          <button id="rerollBtn" class="secondary">Reroll Offers ($150)</button>
+        </div>
+        <div id="marketList" class="list"></div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-header">
+          <h2>Your Base</h2>
+          <button id="upgradeBaseBtn">Upgrade Base</button>
+        </div>
+        <div id="baseList" class="list"></div>
+      </section>
+
+      <section class="panel card">
+        <div class="panel-header">
+          <h2>Operations</h2>
+        </div>
+        <div class="actions">
+          <button id="tickBtn">Run 1 Day</button>
+          <button id="raidBtn" class="danger">Steal an AI</button>
+          <button id="cooldownBtn" class="secondary">Reduce Heat ($250)</button>
+        </div>
+        <div id="eventLog" class="event-log"></div>
+      </section>
+    </main>
+
+    <section class="card panel bottom-panel">
+      <div class="panel-header">
+        <h2>AI Encyclopedia</h2>
+      </div>
+      <div id="encyclopedia" class="list compact"></div>
+    </section>
+  </div>
+
+  <dialog id="helpDialog">
+    <h3>How to Play</h3>
+    <p>Buy AIs from the market to generate cash each day. Each AI uses power and may add heat. Upgrade your base for more capacity. Raid to try stealing stronger AIs, but failed raids increase heat. If heat gets too high, enforcement may seize some of your assets.</p>
+    <ul>
+      <li>Run 1 Day to earn passive income.</li>
+      <li>Buy strong AIs and balance power usage.</li>
+      <li>Use raids for high-risk upgrades.</li>
+      <li>Keep heat under control or lose progress.</li>
+    </ul>
+    <button id="closeHelpBtn">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
